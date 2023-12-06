@@ -2,6 +2,7 @@ from PIL import Image
 import requests
 import streamlit as st
 from streamlit_lottie import st_lottie
+import os
 
 # Find more emojis here: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="My website", page_icon=":tada:", layout="wide")
@@ -13,10 +14,17 @@ def load_lottieurl(url):
         return None
     return r.json()
 
-# Use local CSS
+
+
 def local_css(file_name):
-    with open(style/style.css) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    css_path = os.path.join(os.path.dirname(__file__), file_name)
+
+    try:
+        with open(css_path) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.warning(f"CSS file '{css_path}' not found. Please check the file path.")
+
 
 local_css("style/style.css")
 
