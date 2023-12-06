@@ -1,3 +1,5 @@
+/* style.css */
+
 /* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
 /* Style inputs with type="text", select elements and textareas */
 input[type=message], input[type=email], input[type=text], textarea {
@@ -34,7 +36,7 @@ input[type=message], input[type=email], input[type=text], textarea {
   /* [theme] */
   /* Primary accent for interactive elements */
   :root {
-    --primaryColor: #E694FF;
+    --primaryColor: #94ffb0;
   }
   
   /* Background color for the main content area */
