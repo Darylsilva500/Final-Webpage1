@@ -14,8 +14,8 @@ def load_lottieurl(url):
     return r.json()
 
 # Use local CSS
-def local_css(style):
-    with open(style) as f:
+def local_css(file_name):
+    with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 local_css("style/style.css")
@@ -38,7 +38,7 @@ with st.sidebar:
     st.subheader("Navigation")
     selected_page = st.radio("Go to", ["Home", "What Huawei Offers", "All About Huawei", "Get In Touch"])
 
-# ---- WHAT I DO ----
+# ---- WHAT HUAWEI OFFERS ----
 if selected_page == "What Huawei Offers":
     with st.container():
         st.write("---")
@@ -63,7 +63,7 @@ if selected_page == "What Huawei Offers":
         with right_column:
             st_lottie(lottie_coding, height=800, key="coding")
 
-# ---- PROJECTS ----
+# ---- ALL ABOUT HUAWEI ----
 elif selected_page == "All About Huawei":
     with st.container():
         st.write("---")
@@ -93,7 +93,7 @@ elif selected_page == "All About Huawei":
             )
             st.markdown("[For more info about Huawei Products](https://consumer.huawei.com/ph/)")
 
-# ---- CONTACT ----
+# ---- GET IN TOUCH ----
 elif selected_page == "Get In Touch":
     with st.container():
         st.write("---")
@@ -114,4 +114,5 @@ elif selected_page == "Get In Touch":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
+
 
