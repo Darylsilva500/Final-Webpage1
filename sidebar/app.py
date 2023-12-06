@@ -116,7 +116,7 @@ elif selected_page == "Get In Touch":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
-         with right_column:
+        with right_column:
             st_lottie(lottie_Man, height=400, key="Man")
 
 
