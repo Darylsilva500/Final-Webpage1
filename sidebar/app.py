@@ -35,10 +35,10 @@ with st.container():
 
 # ---- SIDEBAR MENU ----
 with st.sidebar:
-    st.subheader("Home")
+    st.subheader("Navigation")
     selected_page = st.radio("Go to", ["Home", "What Huawei Offers", "All About Huawei", "Get In Touch"])
 
-# ---- WHAT HUAWEI OFFERS ----
+# ---- WHAT I DO ----
 if selected_page == "What Huawei Offers":
     with st.container():
         st.write("---")
@@ -63,7 +63,7 @@ if selected_page == "What Huawei Offers":
         with right_column:
             st_lottie(lottie_coding, height=800, key="coding")
 
-# ---- ALL ABOUT HUAWEI ----
+# ---- PROJECTS ----
 elif selected_page == "All About Huawei":
     with st.container():
         st.write("---")
@@ -93,7 +93,7 @@ elif selected_page == "All About Huawei":
             )
             st.markdown("[For more info about Huawei Products](https://consumer.huawei.com/ph/)")
 
-# ---- GET IN TOUCH ----
+# ---- CONTACT ----
 elif selected_page == "Get In Touch":
     with st.container():
         st.write("---")
@@ -114,5 +114,4 @@ elif selected_page == "Get In Touch":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
-
 
