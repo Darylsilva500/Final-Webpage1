@@ -23,6 +23,7 @@ local_css("style/style.css")
 
 # ---- LOAD ASSETS ----
 lottie_coding = load_lottieurl("https://lottie.host/36853ef1-8d93-4513-9431-7da39c5dfb67/8plGXL88xC.json")
+lottie_Man = load_lottieurl("https://lottie.host/f0d22d59-0e35-4bcb-ad52-3ddb2e9550d9/RywyFDumVc.json")
 img_verse = Image.open("images/verse.png")
 img_intro = Image.open("images/intro.png")
 
@@ -115,5 +116,7 @@ elif selected_page == "Get In Touch":
             st.markdown(contact_form, unsafe_allow_html=True)
         with right_column:
             st.empty()
+         with right_column:
+            st_lottie(lottie_Man, height=400, key="Man")
 
 
